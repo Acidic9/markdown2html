@@ -42,6 +42,9 @@ function markdownToHTML(markdown) {
 		return wholeMatch;
 	});
 
+	// Set marked options
+	marked.setOptions({ breaks: true });
+
 	// Return SAFE markdown and convert to HTML
 	return marked(escaped);
 }
